@@ -1,0 +1,17 @@
+unclassified:
+  gitHubPluginConfig:
+    configs:
+      - name: "InHouse GitHub EE"
+        credentialsId: "github-PAT"
+        manageHooks: false
+        apiUrl: "https://api.github.com/"
+    hookUrl: "http://localhost:8080/github-webhook/"
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - string:
+              description: "github-PAT-description"
+              id: "github-PAT"
+              scope: GLOBAL
+              secret: "{AQAAABAAAAAwg9AJK3UvmEyPfYhxJD6G6JHRY04gGZlqXGDdXMh0ADxlNaJZB/PgL+pH8CT0y0kpaHhDqwsQxgFmUiUxQm9gHQ==}"

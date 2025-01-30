@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.494-jdk17
+FROM jenkins/jenkins:2.479.3-lts-jdk17
 
 RUN jenkins-plugin-cli --plugins \
     kubernetes:4306.vc91e951ea_eb_d \
@@ -9,4 +9,10 @@ RUN jenkins-plugin-cli --plugins \
     ws-cleanup:0.48 \
     hashicorp-vault-plugin:371.v884a_4dd60fb_6 \
     aws-credentials:242.v8d05df911e3d \
-    pipeline-stage-view:2.34
+    pipeline-stage-view:2.34 \
+    simple-theme-plugin:202.v6367d3dea_73b_
+
+COPY ./casc_configs/ /var/jenkins_home/casc_configs
+
+# Set the JCasC path so Jenkins knows where to load configurations from
+ENV CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs
