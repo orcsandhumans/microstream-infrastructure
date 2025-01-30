@@ -1,0 +1,1 @@
+1. Fix reverse proxy - https://www.jenkins.io/doc/book/system-administration/reverse-proxy-configuration-troubleshooting/
